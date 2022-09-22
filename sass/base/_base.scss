@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  color: black;
+  font-size: 100%; /* 16px = 1rem    16/16=1 */
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  //background-color: bisque;
+}
+
+body,
+p,
+a,
+ul,
+li {
+  text-decoration: none;
+  color: inherit;  
+}
+
+li {
+  list-style-type: none;
+}
+
+.arrow__icon {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--color-primary);
+}
+
+a {
+  cursor: pointer;
+}

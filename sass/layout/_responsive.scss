@@ -1,0 +1,154 @@
+/* breakpoint 768px */
+@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 0) {
+  .header {
+    &__image {
+      height: 25rem;
+    }
+
+    .nav {
+      .nav-menu {
+        position: fixed;
+        bottom: 2vh;
+        left: 40%;
+      }
+    }
+  }
+
+  .categories {
+    .categories-items__container {
+      width: 100%;
+      height: 13.75rem;
+    }
+
+    .categories__link {
+      width: 13.75rem;
+      height: 13.75rem;
+    }
+  }
+
+  .cards {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: -4rem;
+    left: 5rem;
+
+    &::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+
+    &__item {
+      float: left;
+
+      &--women {
+        position: absolute;
+        top: 3rem;
+        left: 19rem;
+      }
+    }
+  }
+
+  .explore {
+    margin-top: -20rem;
+  }
+
+  .products {
+    width: 100%;
+    height: 15rem;
+    margin-top: 1rem;
+
+    .category-card {
+      height: inherit;
+      &__link--4,
+      &__link--5,
+      &__link--6 {
+        display: block;
+      }
+
+      &__container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      &__link {
+        flex: 0 1 45%;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        position: relative;
+      }
+
+      &__image-group {
+        right: 5rem;
+      }
+
+      &__images:not(:first-child) > * {
+        display: none;
+      }
+    }
+  }
+
+  .community {
+    margin-top: 2rem;
+  }
+}
+
+/* breakpoint 1024px */
+@media screen and (min-width: 1024px) {
+  .header {
+    div:has(.navigation-desktop) {
+      display: block;
+      border: 1px solid blue;
+    }
+
+    .navigation-mobile {
+      display: none;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      height: 100vh;
+      border: 1px solid red;
+    }
+
+    &__image {
+      flex: 0 1 60vw;
+      height: 100vh;
+    }
+
+    &__text-box {
+      flex: 0 1 40vw;
+    }
+  }
+}
+
+/* breakpoint 1366px */
+@media screen and (min-width: 1366px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+// /*fierfox*/
+//      @-moz-document url-prefix() {
+//          #my-id { padding-top : 8px;}
+//      }
+//      /*safari*/
+//     @media screen and (-webkit-min-device-pixel-ratio:0) {
+//         #my-id { padding-top : 8px;}
+//     }
+//      /*Opera*/
+//     @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+//          #my-id { padding-top : 10px; }
+//     }
+//     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+//       #my-id { padding-top : 7px; }
+//     }
