@@ -1,51 +1,72 @@
 /* breakpoint 768px */
 @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 0) {
-  .header {
-    &__image {
-      height: 25rem;
+  .nav {
+    width: 100%;
+  }
+
+  .nav__container .nav-menu {
+    left: 40%;
+  }
+
+  .hero {
+    width: 100%;
+
+    &__image-container {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
     }
 
-    .nav {
-      .nav-menu {
-        position: fixed;
-        bottom: 2vh;
-        left: 40%;
+    .img-hiking {
+      height: 40rem;
+      object-fit: cover;
+    }
+  }
+
+  .categories-section {
+    margin-top: 57rem;
+
+    .categories {
+      .categories-items__container {
+        width: 100%;
+        height: 13.75rem;
+      }
+
+      .categories__link {
+        width: 13.75rem;
+        height: 13.75rem;
       }
     }
   }
 
-  .categories {
-    .categories-items__container {
-      width: 100%;
-      height: 13.75rem;
-    }
-
-    .categories__link {
-      width: 13.75rem;
-      height: 13.75rem;
-    }
+  .celebrating{
+    margin-top: 0;
   }
 
-  .cards {
-    width: auto;
-    height: auto;
-    position: relative;
-    top: -4rem;
-    left: 5rem;
+  .shop {
+    .cards {
+      width: auto;
+      height: 23rem;
+      position: relative;
+      top: -4rem;
+      left: 5rem;
 
-    &::after {
-      content: "";
-      clear: both;
-      display: block;
-    }
+      &::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
 
-    &__item {
-      float: left;
+      &__item {
+        width: 21rem;
+        height: 21rem;
+        float: left;
 
-      &--women {
-        position: absolute;
-        top: 3rem;
-        left: 19rem;
+        &--women {
+          position: absolute;
+          top: 3rem;
+          left: 22rem;
+        }
       }
     }
   }
@@ -94,6 +115,10 @@
     }
   }
 
+  .products{
+    margin-top: 7rem;
+  }
+
   .community {
     margin-top: 2rem;
   }
@@ -101,31 +126,221 @@
 
 /* breakpoint 1024px */
 @media screen and (min-width: 1024px) {
-  .header {
-    div:has(.navigation-desktop) {
-      display: block;
-      border: 1px solid blue;
+  body {
+    line-height: 1.4rem;
+  }
+
+  .nav {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+
+    &__navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .navigation-mobile {
+    &__list {
+      display: block;
+    }
+
+    &__item {
+      margin-right: 1rem;
+    }
+
+    &__text {
+      color: var(--color-primary);
+    }
+
+    .nav-menu {
       display: none;
     }
 
-    &__content {
-      display: flex;
-      flex-direction: row;
-      width: 100vw;
-      height: 100vh;
-      border: 1px solid red;
+    svg {
+      fill: var(--color-primary);
     }
 
-    &__image {
+    &__list {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .hamburger-btn {
+      background-color: transparent;
+      border: none;
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &--bottom {
+        margin-top: -0.5rem;
+      }
+    }
+
+    .minus-icon,
+    .user-icon,
+    .search-icon,
+    .location-shopping-icon {
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+  }
+
+  .hero {
+    width: 100vw;
+    height: 100vh;
+
+    &__content {
+      display: flex;
+      align-items: flex-start;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    &__image-container {
       flex: 0 1 60vw;
       height: 100vh;
+
+      .img-hiking {
+        width: auto;
+        height: 100vh;
+      }
     }
 
     &__text-box {
       flex: 0 1 40vw;
+      height: 100vh;
+      margin-top: 0;
+      font-size: 0.9rem;
+    }
+
+    &__hero-title h1 {
+      font-size: 4.5rem;
+      line-height: 1.1;
+    }
+  }
+
+  .categories-section {
+    margin-top: 39rem;
+
+    .categories {
+      width: 100vw;
+
+      &__content {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__heading {
+        flex: 0 1 30vw;
+        font-size: 2rem;
+        margin-left: 2rem;
+      }
+
+      .categories-items__container {
+        height: 15rem;
+        flex: 0 1 70vw;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1.2rem;
+      }
+
+      &__link,
+      &__item {
+        width: 14.75rem;
+        height: 14.75rem;
+      }
+    }
+  }
+
+  .celebrating {
+    width: 100%;
+    // height: 100%;
+
+    .video-bg {
+      width: 100vw;
+      //height: 100vh;
+
+      // display: flex;
+      // flex-direction: row;
+      // //align-items: center;
+
+      // &__video{
+      //   flex: 0 1 60vw;
+      // }
+
+      // &__text-content {
+      //   flex: 0 1 40vw;
+      // }
+    }
+  } 
+
+  .shop {
+    width: 100%;
+    height: 35rem;
+
+    .cards {
+      width: 100%;
+
+      &__item {
+        width: 34rem;
+        height: 34rem;
+
+        &--women {
+          left: 36rem;
+        }
+      }
+    }
+  }
+
+  .explore{
+    width: 100%;
+
+    .video-bg{
+      width: 100%;
+
+      &__video {
+        width: 100vw;
+      }
+    }
+  }
+
+  .products{
+    width: 100%;
+
+    .category-card{
+
+      &__link {
+        flex: 0 1 30%;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        position: relative;
+      }
+    }
+  }
+
+  .community__container {
+    width: 95%;
+    margin: 0 auto;
+
+    .community__gallery-container {
+      height: auto;
+      columns: 3 auto;
+      gap: 1rem;
+
+      & img {
+        margin-bottom: 1rem;
+        width: 100%;
+      }
     }
   }
 }
@@ -133,22 +348,8 @@
 /* breakpoint 1366px */
 @media screen and (min-width: 1366px) {
   body {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
-// /*fierfox*/
-//      @-moz-document url-prefix() {
-//          #my-id { padding-top : 8px;}
-//      }
-//      /*safari*/
-//     @media screen and (-webkit-min-device-pixel-ratio:0) {
-//         #my-id { padding-top : 8px;}
-//     }
-//      /*Opera*/
-//     @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
-//          #my-id { padding-top : 10px; }
-//     }
-//     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
-//       #my-id { padding-top : 7px; }
-//     }
+

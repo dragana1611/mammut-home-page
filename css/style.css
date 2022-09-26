@@ -13,7 +13,7 @@
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --color-black: #191919;
-  --color-dot: #E00B25;
+  --color-dot: #e00b25;
 }
 
 *,
@@ -55,7 +55,11 @@ a {
   cursor: pointer;
 }
 
-@keyframes blinkingDot {}
+@keyframes blinkingDot {
+  0% {
+    opacity: 0;
+  }
+}
 @font-face {
   font-family: "Helvetica Now Text";
   src: local("Helvetica Now Text  Regular"), local("Helvetica-Now-Text--Regular"), url("../assets/fonts/HelveticaNowText-Regular.ttf") format("ttf");
@@ -179,7 +183,7 @@ h1, h2, h3 {
   border-bottom: 1px solid var(--color-primary);
 }
 .footer__about {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 .footer__about-title {
   font-size: 0.75rem;
@@ -188,7 +192,7 @@ h1, h2, h3 {
 .footer__nav-social {
   width: 100%;
   height: 15rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
   display: flex;
   gap: 0.5rem;
 }
@@ -211,7 +215,7 @@ h1, h2, h3 {
 }
 .footer__lower {
   width: 100%;
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 }
 .footer__lower-location {
   width: 100%;
@@ -231,10 +235,11 @@ h1, h2, h3 {
 }
 .footer__nav-legacy {
   width: 100%;
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 }
 .footer__legacy-wrapper {
   margin: 0 auto;
+  text-align: center;
 }
 .footer__legacy-link {
   font-size: 0.7rem;
@@ -245,76 +250,87 @@ h1, h2, h3 {
 
 .header__top-bar {
   width: 95%;
-  margin: 0 auto;
   border: 2px solid var(--color-dot);
+  position: absolute;
+  top: 0;
+  left: 2.5%;
 }
 
 .header {
   width: 100%;
-  height: 35rem;
-  position: relative;
+  height: 3.75rem;
+  background: transparent;
+  text-align: center;
 }
 .header__logo {
   fill: var(--color-primary);
 }
-.header__content {
+
+.hero {
   width: 100%;
-  height: inherit;
+  height: 56rem;
   position: absolute;
-  top: -4.8rem;
+  top: 0;
+  left: 0;
   z-index: -1;
-  display: flex;
-  flex-direction: column;
 }
-.header__image {
+.hero__content {
   width: 100%;
-  height: 22rem;
-  background: url("https://www.mammut.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fl595fda2nfqd%2F2SQZgb8HWHiY6qS3nN1sl5%2F354e52811cbdba8eee87062f17bae82d%2FHiking_FW22_Scottland_019.png&w=1024&q=85") no-repeat center center;
-  background-size: cover;
 }
-.header__text-box {
+.hero__image-container {
   width: 100%;
+  height: 35rem;
+  overflow: hidden;
+}
+.hero .img-hiking {
+  width: 100vw;
+  height: 35rem;
+  object-fit: cover;
+}
+.hero__text-box {
+  width: 100vw;
   height: 17.5rem;
   background-color: var(--color-secondary);
+  z-index: 100;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-.header__hero {
+.hero__wrapper {
   width: 80%;
-  height: 13rem;
+  height: 17rem;
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   row-gap: 1rem;
 }
-.header__hero-title {
+.hero__hero-title {
   font-size: 1.3rem;
   line-height: 3rem;
 }
-.header__hero-text {
+.hero__hero-text {
   margin-top: 1rem;
 }
-.header__hero-text p {
+.hero__hero-text p {
   max-width: 60vw;
 }
-.header__link-group {
+.hero__link-group {
   display: inline-flex;
   justify-content: center;
   align-items: flex-start;
   width: 8rem;
   height: auto;
 }
-.header__hero-link {
+.hero__hero-link {
   margin: 0.5rem 0.5rem 0 0;
   font-size: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header__hero-link .arrow__icon {
+.hero__hero-link .arrow__icon {
   width: 1rem;
   height: 1rem;
   fill: black;
@@ -323,11 +339,12 @@ h1, h2, h3 {
 
 .categories-section {
   width: 100%;
+  height: 100%;
+  margin-top: 51rem;
 }
 .categories-section .categories {
   width: 100%;
   height: auto;
-  margin-top: 6rem;
 }
 .categories-section .categories__content {
   width: 100%;
@@ -354,6 +371,7 @@ h1, h2, h3 {
   fill: var(--color-dot);
   position: absolute;
   bottom: -0.2rem;
+  animation: blinkingDot 1.5s steps(2) infinite;
 }
 .categories-section .categories .categories-items__container {
   width: 100%;
@@ -400,21 +418,20 @@ h1, h2, h3 {
 }
 
 .celebrating {
-  margin-top: 2rem;
+  margin-top: -15rem;
   width: 100%;
   height: auto;
 }
-
-.video-bg {
+.celebrating .video-bg {
   width: 100%;
   position: relative;
 }
-.video-bg__video {
+.celebrating .video-bg__video {
   width: 100%;
   object-fit: cover;
   overflow: hidden;
 }
-.video-bg__text-content {
+.celebrating .video-bg__text-content {
   width: 100%;
   height: inherit;
   color: var(--color-primary);
@@ -426,7 +443,7 @@ h1, h2, h3 {
   justify-content: center;
   align-items: flex-start;
 }
-.video-bg__text-box {
+.celebrating .video-bg__text-box {
   width: 60%;
   height: auto;
   margin: 2rem 0 3rem 1rem;
@@ -437,11 +454,11 @@ h1, h2, h3 {
   justify-content: center;
   row-gap: 1rem;
 }
-.video-bg__title {
+.celebrating .video-bg__title {
   font-size: 1.7rem;
   line-height: 3rem;
 }
-.video-bg__link {
+.celebrating .video-bg__link {
   width: auto;
   display: flex;
   justify-content: flex-start;
@@ -449,36 +466,34 @@ h1, h2, h3 {
   gap: 0.5rem;
   font-size: 0.8rem;
 }
-.video-bg__link .arrow__icon {
+.celebrating .video-bg__link .arrow__icon {
   display: inline-block;
   fill: var(--color-primary);
   width: 1rem;
   height: 1rem;
 }
-.video-bg__link p {
+.celebrating .video-bg__link p {
   max-width: 60vw;
 }
 
 .shop {
   width: 100%;
-  height: 40rem;
+  height: 45rem;
   margin-top: 20rem;
 }
 .shop .cards {
   width: 100%;
-  height: 40rem;
+  height: inherit;
   color: var(--color-primary);
   position: relative;
   margin: 0 auto;
 }
 .shop .cards__item {
-  width: 16.875rem;
-  height: 16.875rem;
+  width: 21rem;
+  height: 21rem;
   margin: 0 auto;
 }
 .shop .cards__item--men {
-  width: 16.875rem;
-  height: 16.875rem;
   margin-bottom: 1rem;
   background: url(../assets/images/mammut-img/Men.jpg) no-repeat center center;
   background-size: cover;
@@ -514,18 +529,58 @@ h1, h2, h3 {
 
 .explore {
   width: 100%;
+  height: auto;
+  margin-top: 2rem;
 }
-.explore .video-explore {
+.explore .video-bg__video {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.explore .video-bg .video-explore {
+  width: 100%;
+  height: inherit;
+  color: var(--color-primary);
   background: transparent;
+  margin: -15rem 0 0 1rem;
+}
+.explore .video-bg__text-box {
+  width: 60%;
+  height: auto;
+  margin: 2rem 0 3rem 1rem;
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+}
+.explore .video-bg__title {
+  font-size: 1.7rem;
+  line-height: 3rem;
 }
 .explore .video-bg__link-group {
+  width: auto;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 0.5rem;
+  font-size: 0.8rem;
+}
+.explore .video-bg__link-group .arrow__icon {
+  display: inline-block;
+  fill: var(--color-primary);
+  width: 1rem;
+  height: 1rem;
+}
+.explore .video-bg__link-group p {
+  max-width: 60vw;
 }
 
 .products {
   width: 100%;
   height: 22rem;
+  margin-top: 1rem;
 }
 .products .category-card {
   padding: 1rem;
@@ -557,7 +612,7 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   position: absolute;
-  left: 15rem;
+  left: 16rem;
 }
 .products .category-card__image {
   width: 3.4rem;
@@ -588,31 +643,19 @@ h1, h2, h3 {
   margin: 3rem;
 }
 
-nav {
-  height: 4.25rem;
-  width: 100%;
-  background-color: transparent;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navigation-desktop {
-  display: none;
-}
-
-.nav__container {
-  width: 100%;
-  height: 3.75rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .nav {
   width: auto;
   height: inherit;
+  margin-top: 1rem;
   position: relative;
+}
+.nav__list {
+  display: none;
+}
+.nav__navigation {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
 }
 .nav__logo-link {
   display: block;
@@ -647,6 +690,7 @@ nav {
   padding: 0 1rem;
   background-color: var(--color-primary);
   box-shadow: 0 0.5px 2px var(--color-grey-dark-2);
+  cursor: pointer;
 }
 .nav .nav-menu .nav__icon--magnifier {
   width: 4.7rem;
@@ -680,48 +724,66 @@ nav {
 }
 .nav .nav-menu .nav__icon .search__icon,
 .nav .nav-menu .nav__icon .hamburger-menu__icon,
-.nav .nav-menu .nav__icon .bug__icon {
+.nav .nav-menu .nav__icon .bag__icon {
   height: 1.2rem;
   width: 1.2rem;
 }
 
 /* breakpoint 768px */
 @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 0) {
-  .header__image {
-    height: 25rem;
+  .nav {
+    width: 100%;
   }
-  .header .nav .nav-menu {
-    position: fixed;
-    bottom: 2vh;
+  .nav__container .nav-menu {
     left: 40%;
   }
-  .categories .categories-items__container {
+  .hero {
+    width: 100%;
+  }
+  .hero__image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .hero .img-hiking {
+    height: 40rem;
+    object-fit: cover;
+  }
+  .categories-section {
+    margin-top: 57rem;
+  }
+  .categories-section .categories .categories-items__container {
     width: 100%;
     height: 13.75rem;
   }
-  .categories .categories__link {
+  .categories-section .categories .categories__link {
     width: 13.75rem;
     height: 13.75rem;
   }
-  .cards {
+  .celebrating {
+    margin-top: 0;
+  }
+  .shop .cards {
     width: auto;
-    height: auto;
+    height: 23rem;
     position: relative;
     top: -4rem;
     left: 5rem;
   }
-  .cards::after {
+  .shop .cards::after {
     content: "";
     clear: both;
     display: block;
   }
-  .cards__item {
+  .shop .cards__item {
+    width: 21rem;
+    height: 21rem;
     float: left;
   }
-  .cards__item--women {
+  .shop .cards__item--women {
     position: absolute;
     top: 3rem;
-    left: 19rem;
+    left: 22rem;
   }
   .explore {
     margin-top: -20rem;
@@ -758,38 +820,182 @@ nav {
   .products .category-card__images:not(:first-child) > * {
     display: none;
   }
+  .products {
+    margin-top: 7rem;
+  }
   .community {
     margin-top: 2rem;
   }
 }
 /* breakpoint 1024px */
 @media screen and (min-width: 1024px) {
-  .header div:has(.navigation-desktop) {
-    display: block;
-    border: 1px solid blue;
+  body {
+    line-height: 1.4rem;
   }
-  .header .navigation-mobile {
+  .nav {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+  .nav__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__list {
+    display: block;
+  }
+  .nav__item {
+    margin-right: 1rem;
+  }
+  .nav__text {
+    color: var(--color-primary);
+  }
+  .nav .nav-menu {
     display: none;
   }
-  .header__content {
+  .nav svg {
+    fill: var(--color-primary);
+  }
+  .nav__list {
     display: flex;
-    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .nav .hamburger-btn {
+    background-color: transparent;
+    border: none;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav .hamburger-btn--bottom {
+    margin-top: -0.5rem;
+  }
+  .nav .minus-icon,
+.nav .user-icon,
+.nav .search-icon,
+.nav .location-shopping-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  .hero {
     width: 100vw;
     height: 100vh;
-    border: 1px solid red;
   }
-  .header__image {
+  .hero__content {
+    display: flex;
+    align-items: flex-start;
+    width: 100vw;
+    height: 100vh;
+  }
+  .hero__image-container {
     flex: 0 1 60vw;
     height: 100vh;
   }
-  .header__text-box {
+  .hero__image-container .img-hiking {
+    width: auto;
+    height: 100vh;
+  }
+  .hero__text-box {
     flex: 0 1 40vw;
+    height: 100vh;
+    margin-top: 0;
+    font-size: 0.9rem;
+  }
+  .hero__hero-title h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+  }
+  .categories-section {
+    margin-top: 39rem;
+  }
+  .categories-section .categories {
+    width: 100vw;
+  }
+  .categories-section .categories__content {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .categories-section .categories__heading {
+    flex: 0 1 30vw;
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+  .categories-section .categories .categories-items__container {
+    height: 15rem;
+    flex: 0 1 70vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .categories-section .categories__link, .categories-section .categories__item {
+    width: 14.75rem;
+    height: 14.75rem;
+  }
+  .celebrating {
+    width: 100%;
+  }
+  .celebrating .video-bg {
+    width: 100vw;
+  }
+  .shop {
+    width: 100%;
+    height: 35rem;
+  }
+  .shop .cards {
+    width: 100%;
+  }
+  .shop .cards__item {
+    width: 34rem;
+    height: 34rem;
+  }
+  .shop .cards__item--women {
+    left: 36rem;
+  }
+  .explore {
+    width: 100%;
+  }
+  .explore .video-bg {
+    width: 100%;
+  }
+  .explore .video-bg__video {
+    width: 100vw;
+  }
+  .products {
+    width: 100%;
+  }
+  .products .category-card__link {
+    flex: 0 1 30%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+  }
+  .community__container {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .community__container .community__gallery-container {
+    height: auto;
+    columns: 3 auto;
+    gap: 1rem;
+  }
+  .community__container .community__gallery-container img {
+    margin-bottom: 1rem;
+    width: 100%;
   }
 }
 /* breakpoint 1366px */
 @media screen and (min-width: 1366px) {
   body {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
