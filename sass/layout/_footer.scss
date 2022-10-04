@@ -1,23 +1,25 @@
 .footer {
   width: 100%;
   height: auto;
-  background-color: var(--color-tertiary);
-  margin-top: 4.5rem;
-  padding: 0 0.4rem;
-  color: var(--color-primary);
+  background-color: $color-tertiary;
+  margin-top: 70px;
+  padding: 0 6.5px;
+  color: $color-primary;
 
   &__container {
     width: 100%;
-    padding: 1.875rem 0.75rem 7.5rem;
+    padding: 30px 12px 120px;
   }
+}
 
+.footer {
   &__communication {
     width: 100%;
     height: auto;
-    margin: 0 0 2.8rem;
-    padding: 1.875rem 0;
+    margin: 0 0 45px;
+    padding: 30px 0;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
   }
 
   .grid {
@@ -40,14 +42,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 1rem;
+    row-gap: 15px;
   }
 
   &__icon {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background-color: var(--color-tertiary-light);
+    background-color: $color-tertiary-light;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +58,7 @@
   &__svg {
     width: 1.3rem;
     height: 1.3rem;
-    fill: var(--color-primary);
+    fill: $color-primary;
   }
 
   &__item-title {
@@ -68,10 +70,12 @@
     width: 100%;
     font-size: 0.75rem;
   }
+}
 
+.footer {
   &__nav {
     width: 100%;
-    height: auto; 
+    height: auto;
   }
 
   &__nav-links {
@@ -89,60 +93,70 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-top: 1px solid var(--color-primary);
+    border-top: 1px solid $color-primary;
 
     &:last-child {
-      border-bottom: 1px solid var(--color-primary);
+      border-bottom: 1px solid $color-primary;
     }
   }
+}
 
+.footer {
   &__about {
-    margin-top: 4rem;
+    margin-top: 64px;
   }
 
   &__about-title {
     font-size: 0.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
   }
+}
 
+.footer {
   &__nav-social {
     width: 100%;
     height: 15rem;
-    margin-top: 4rem;
-    display: flex;    
-    gap: 0.5rem;
+    margin-top: 64px;
+    display: flex;
+    gap: 10px;
   }
 
   &__sub-nav {
-    flex: 1;    
-    display: flex;
-    flex-direction: column;    
-    gap: 0.75rem;
-    text-align: left;    
-
-    a{
-      display: block;
-      width: 100%;
-      height: 100%;
-      text-align: left;
-    }    
-  }
-
-  &__social-title{
     width: 100%;
-    text-align: left;    
+    height: 100%;
+    text-align: left;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    a {
+      display: flex;
+      width: 100%;
+      height: 35px;
+      text-align: left;
+    }
   }
 
+  &__social-title {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.footer {
   &__lower {
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 64px;
   }
 
   &__lower-location {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 15px;
   }
 
   .location-icon {
@@ -150,32 +164,33 @@
     height: 1rem;
   }
 
-  &__lower-text{
-
-    &--big{
-        font-size: 0.875rem;
+  &__lower-text {
+    &--big {
+      font-size: 0.875rem;
     }
 
-    &--small{
-        font-size: 0.6rem;
+    &--small {
+      font-size: 0.6rem;
     }
   }
+}
 
-  &__nav-legacy{
+.footer {
+  &__nav-legacy {
     width: 100%;
-    margin-top: 4rem;    
+    margin-top: 64px;
   }
 
-  &__legacy-wrapper{
+  &__legacy-wrapper {
     margin: 0 auto;
-    text-align: center;    
+    text-align: center;
   }
 
-  &__legacy-link{    
+  &__legacy-link {
     font-size: 0.7rem;
-    
-    &:not(:last-child){
-        margin-right: 1rem;
+
+    &:not(:last-child) {
+      margin-right: 16px;
     }
   }
 }

@@ -1,15 +1,15 @@
 .nav {
   width: auto;
   height: inherit;
-  margin-top: 1rem;  
+  margin-top: 1rem;
   position: relative;
 
   &__list {
     display: none;
   }
 
-  &__navigation {
-    display: inline-flex;    
+  &__nav-content {
+    display: inline-flex;
     align-items: center;
     background-color: transparent;
   }
@@ -31,7 +31,9 @@
     height: 3rem;
     position: fixed;
     bottom: 2vh;
-    left: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,8 +50,8 @@
     .nav__icon {
       height: inherit;
       padding: 0 1rem;
-      background-color: var(--color-primary);
-      box-shadow: 0 0.5px 2px var(--color-grey-dark-2);
+      background-color: $color-primary;
+      box-shadow: 0 0.5px 2px $color-grey-dark-2;
       cursor: pointer;
 
       &--magnifier {

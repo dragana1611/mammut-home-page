@@ -4,10 +4,6 @@
     width: 100%;
   }
 
-  .nav__container .nav-menu {
-    left: 40%;
-  }
-
   .hero {
     width: 100%;
 
@@ -24,7 +20,7 @@
   }
 
   .categories-section {
-    margin-top: 57rem;
+    margin-top: 1200px;
 
     .categories {
       .categories-items__container {
@@ -47,6 +43,7 @@
   .shop {
     width: 100%;
     height: 24rem;
+    margin-top: 350px;
 
     .cards__container {
       width: 100%;
@@ -84,13 +81,13 @@
   .products {
     width: 100%;
     height: 15rem;
-    margin-top: 1rem;
+    margin-top: 15px;
 
     .category-card {
+      width: 100%;
       height: inherit;
-      &__link--4,
-      &__link--5,
-      &__link--6 {
+
+      &__link:nth-last-child(-n + 3) {
         display: block;
       }
 
@@ -99,49 +96,51 @@
         height: auto;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 15px;
       }
 
-      &__link {
+      &__link,
+      &__link:nth-last-child(-n + 3) {
+        width: 100%;
+        height: 3.5rem;
         flex: 0 1 45%;
         display: flex;
+        justify-content: flex-start;
         align-items: center;
-        padding: 1rem;
-        position: relative;
       }
 
       &__image-group {
-        right: 5rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
       }
 
-      &__images:not(:first-child) > * {
+      &__images:not(:first-child) {
         display: none;
       }
     }
   }
 
   .products {
-    margin-top: 7rem;
+    margin-top: 110px;
   }
 
   .community {
-    margin-top: 2rem;
+    margin-top: 100px;
   }
 }
 
 /* breakpoint 1024px */
 @media screen and (min-width: 1024px) {
-  body {
-    line-height: 1.4rem;
-  }
-
   .nav {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 15px;
     font-size: 0.8rem;
 
-    &__navigation {
+    &__nav-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -152,11 +151,11 @@
     }
 
     &__item {
-      margin-right: 1rem;
+      margin-right: 15px;
     }
 
     &__text {
-      color: var(--color-primary);
+      color: $color-primary;
     }
 
     .nav-menu {
@@ -164,7 +163,11 @@
     }
 
     svg {
-      fill: var(--color-primary);
+      fill: $color-primary;
+    }
+
+    &__item {
+      cursor: pointer;
     }
 
     &__list {
@@ -176,20 +179,17 @@
     .hamburger-btn {
       background-color: transparent;
       border: none;
-      margin-left: 1rem;
+      margin-left: 15px;
       display: flex;
       flex-direction: column;
       align-items: center;
 
       &--bottom {
-        margin-top: -0.5rem;
+        margin-top: -8px;
       }
     }
 
-    .minus-icon,
-    .user-icon,
-    .search-icon,
-    .location-shopping-icon {
+    .navigation-icon {
       width: 1.3rem;
       height: 1.3rem;
     }
@@ -198,7 +198,6 @@
   .hero {
     width: 100vw;
     height: 100vh;
-    border: 1px solid red;
 
     &__content {
       display: flex;
@@ -231,13 +230,14 @@
   }
 
   .categories-section {
-    margin-top: 48rem;
+    margin-top: 770px;
+    width: 100%;
 
     .categories {
-      width: 100vw;
+      width: 100%;
 
       &__content {
-        width: 100vw;
+        width: 100%;
         height: auto;
         display: flex;
         flex-direction: row;
@@ -248,15 +248,15 @@
       &__heading {
         flex: 0 1 30vw;
         font-size: 2rem;
-        margin-left: 2rem;
       }
+
       .categories-items__container {
         height: 15rem;
         flex: 0 1 70vw;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
-        gap: 1.2rem;
+        gap: 15px;
       }
 
       &__link,
@@ -294,6 +294,7 @@
   .shop {
     width: 100%;
     height: 35rem;
+    margin-top: 100px;
 
     .cards {
       width: 100%;
@@ -316,7 +317,8 @@
       width: 100%;
 
       &__video {
-        width: 100vw;
+        //width: 100%;
+        object-fit: cover;
       }
     }
   }
@@ -325,11 +327,15 @@
     width: 100%;
 
     .category-card {
-      &__link {
+      &__link,
+      &__link:nth-last-child(-n + 3) {
         flex: 0 1 30%;
         display: flex;
         align-items: center;
-        padding: 1rem;
+        padding-left: 10px;
+        
+        border: none;
+        border-right: 1px solid $color-grey-dark-3;
         position: relative;
       }
     }
@@ -345,35 +351,59 @@
       gap: 1rem;
 
       & img {
-        margin-bottom: 1rem;
+        margin-bottom: 15px;
         width: 100%;
       }
     }
   }
 
-  .footer{
+  .footer {
     width: 100%;
-    height:60rem; 
-    overflow: hidden;   
+    height: 60rem;
+    overflow: hidden;
 
-    &__container{
-      width: 100vw;      
+    &__container {
+      width: 100vw;
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;      
+      flex-wrap: wrap;
     }
 
-    &__communication, &__nav, &__about, &__nav-social, &__lower {
+    &__communication {
+      width: 100%;
+      //height: auto;
+      //margin: 0 0 2.8rem;
+      //padding: 1.875rem 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &__items {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &__communication,
+    &__nav,
+    &__about,
+    &__nav-social,
+    &__lower {
       flex: 0 1 45vw;
-      margin-right: 1rem;      
+      margin-right: 15px;
     }
 
-    &__nav{
-      margin-top: 3rem;
+    &__nav {
+      margin-top: 48px;
     }
 
-    &__legacy-wrapper{
-      text-align: left;      
+    &__legacy-wrapper {
+      text-align: left;
+    }
+
+    &__lower-text--small,
+    &__legacy-link {
+      font-size: 0.875rem;
     }
   }
 }
@@ -382,5 +412,35 @@
 @media screen and (min-width: 1366px) {
   body {
     font-size: 1.3rem;
+  }
+
+  .footer {
+    width: 100%;
+    height: 60rem;
+    overflow: hidden;
+
+    &__container {
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__communication,
+    &__nav,
+    &__about,
+    &__nav-social,
+    &__lower {
+      flex: 0 1 45vw;
+      margin-right: 15px;
+    }
+
+    &__nav {
+      margin-top: 48px;
+    }
+
+    &__legacy-wrapper {
+      text-align: left;
+    }
   }
 }

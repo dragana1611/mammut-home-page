@@ -16,16 +16,16 @@
     overflow: hidden;
   }
 
-  .img-hiking {
-    width: 100vw;
-    height: 35rem;
+  .img-hero {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
   &__text-box {
     width: 100vw;
     height: 17.5rem;
-    background-color: var(--color-secondary);
+    background-color: $color-secondary;
     z-index: 100;
 
     display: flex;
@@ -37,11 +37,11 @@
   &__wrapper {
     width: 80%;
     height: 17rem;
-    margin-left: 2rem;
+    margin-left: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 1rem;
+    row-gap: 15px;
   }
 
   &__hero-title {
@@ -50,7 +50,7 @@
   }
 
   &__hero-text {
-    margin-top: 1rem;
+    margin-top: 15px;
 
     p {
       max-width: 60vw;
@@ -58,15 +58,15 @@
   }
 
   &__link-group {
+    width: 8rem;
+    height: auto;
     display: inline-flex;
     justify-content: center;
     align-items: flex-start;
-    width: 8rem;
-    height: auto;
   }
 
   &__hero-link {
-    margin: 0.5rem 0.5rem 0 0;
+    margin: 8px 8px 0 0;
     font-size: 0.8rem;
     display: flex;
     justify-content: center;
@@ -75,7 +75,7 @@
     .arrow__icon {
       width: 1rem;
       height: 1rem;
-      fill: black;
+      fill: $color-black;
       margin-right: 5px;
     }
   }
@@ -85,11 +85,12 @@
   width: 100%;
   height: 23rem;
 
-  margin: 51rem 0 0 2rem;
+  margin-top: 815px;
 
   .categories {
     width: 100%;
     height: inherit;
+    padding-left: 30px;
 
     &__content {
       width: 100%;
@@ -98,12 +99,12 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      margin: 3rem 0 4rem 0;
+      margin: 48px 0 64px 0;
     }
 
     &__heading {
       width: 90%;
-      margin: 0 0 2rem 1rem;
+      margin: 0 0 32px 15px;
       position: relative;
     }
 
@@ -116,11 +117,12 @@
     .dot-icon {
       width: 1.5rem;
       height: 1.5rem;
-      fill: var(--color-dot);
+      fill: $color-dot;
       position: absolute;
-      bottom: -0.2rem;
+      bottom: -1.6px;
+      opacity: 0;
 
-      animation: blinkingDot 1.5s steps(2) infinite;
+      animation: blinkingDot 1.2s infinite;
     }
 
     .categories-items__container {
@@ -129,20 +131,20 @@
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
-      margin-left: 1rem;
+      margin-left: 15px;
+      overflow: hidden;
     }
 
     &__link {
       display: block;
       width: 10.5rem;
       height: 10.5rem;
-      margin-right: 0.5rem;
+      margin-right: 8px;
     }
 
     &__item {
       width: inherit;
       height: inherit;
-      overflow: hidden;
 
       display: flex;
       justify-content: center;
@@ -168,12 +170,12 @@
     }
 
     .categories-text {
-      color: var(--color-primary);
+      color: $color-primary;
       font-size: 1.5rem;
     }
 
     &__icon-arrow {
-      fill: var(--color-primary);
+      fill: $color-primary;
       width: 1.5rem;
       height: 1.5rem;
     }
@@ -181,9 +183,8 @@
 }
 
 .celebrating {
-  margin-top: 5rem;
   width: 100%;
-  height: 100%;
+  height: 54rem;
 
   .video-bg {
     width: 100%;
@@ -198,10 +199,10 @@
     &__text-content {
       width: 100%;
       height: auto;
-      color: var(--color-primary);
-      background-color: var(--color-tertiary);
+      color: $color-primary;
+      background-color: $color-tertiary;
       position: absolute;
-      top: 35rem;
+      top: 560px;
 
       display: flex;
       flex-direction: column;
@@ -212,14 +213,14 @@
     &__text-box {
       width: 60%;
       height: auto;
-      margin: 2rem 0 3rem 1rem;
+      margin: 32px 0 45px 15px;
       line-height: 1.2rem;
       font-size: 0.9rem;
 
       display: flex;
       flex-direction: column;
       justify-content: center;
-      row-gap: 1rem;
+      row-gap: 15px;
     }
 
     &__title {
@@ -237,7 +238,7 @@
 
       .arrow__icon {
         display: inline-block;
-        fill: var(--color-primary);
+        fill: $color-primary;
         width: 1rem;
         height: 1rem;
       }
@@ -252,12 +253,12 @@
 .shop {
   width: 100%;
   height: 45rem;
-  margin-top: 20rem;
+  margin-top: 70px;
 
   .cards {
     width: 100%;
     height: inherit;
-    color: var(--color-primary);
+    color: $color-primary;
     position: relative;
     margin: 0 auto;
 
@@ -267,7 +268,7 @@
       margin: 0 auto;
 
       &--men {
-        margin-bottom: 1rem;
+        margin-bottom: 15px;
         background: url(../assets/images/mammut-img/Men.jpg) no-repeat center
           center;
         background-size: cover;
@@ -290,7 +291,8 @@
     &__text {
       width: 100%;
       height: 100%;
-      padding: 1rem;
+      padding: 15px;
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -299,13 +301,13 @@
     &__title {
       height: 2.5rem;
       font-size: 2rem;
-      margin-top: 1rem;
+      margin-top: 15px;
     }
 
     &__links {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 8px;
     }
   }
 }
@@ -313,36 +315,37 @@
 .explore {
   width: 100%;
   height: auto;
-  margin-top: 5rem;
+  margin-top: 70px;
 
   .video-bg {
     width: 100%;
+    overflow: hidden;
+    border: 1px solid red;
 
     &__video {
       width: 100%;
       object-fit: cover;
-      overflow: hidden;
     }
 
     .video-explore {
       width: 100%;
       height: inherit;
-      color: var(--color-primary);
+      color: $color-primary;
       background: transparent;
-      margin: -15rem 0 0 1rem;
+      margin: -240px 0 0 15px;
     }
 
     &__text-box {
       width: 60%;
       height: auto;
-      margin: 2rem 0 3rem 1rem;
+      margin: 32px 0 48px 15px;
       line-height: 1.2rem;
       font-size: 0.9rem;
 
       display: flex;
       flex-direction: column;
       justify-content: center;
-      row-gap: 1rem;
+      row-gap: 15px;
     }
 
     &__title {
@@ -355,12 +358,12 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      gap: 0.5rem;
+      gap: 8px;
       font-size: 0.8rem;
 
       .arrow__icon {
         display: inline-block;
-        fill: var(--color-primary);
+        fill: $color-primary;
         width: 1rem;
         height: 1rem;
       }
@@ -375,30 +378,28 @@
 .products {
   width: 100%;
   height: 22rem;
-  margin-top: 1rem;
+  margin-top: 15px;
 
   .category-card {
-    padding: 1rem;
+    padding: 15px;
     width: 100%;
     height: 100%;
 
     &__container {
-      height: 5.5rem;
+      height: 5.5rem;      
     }
 
     &__link {
       width: 100%;
-      height: inherit;
+      height: 100%;
       display: flex;
       align-items: center;
-      padding: 1rem;
+      //padding: 15px;
       position: relative;
-      border-bottom: 1px solid var(--color-grey-dark-3);
+      border-bottom: 1px solid $color-grey-dark-3;
       overflow: hidden;
 
-      &--4,
-      &--5,
-      &--6 {
+      &:not(:nth-child(-n + 3)) {
         display: none;
       }
     }
@@ -447,6 +448,6 @@
 
   .community__title {
     font-size: 3.4rem;
-    margin: 3rem;
+    margin: 48px;
   }
 }
