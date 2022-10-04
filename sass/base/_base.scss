@@ -37,3 +37,9 @@ li {
 a {
   cursor: pointer;
 }
+
+@media screen and (min-width: 1366px) {
+  body {
+    font-size: 1.3rem;
+  }
+}

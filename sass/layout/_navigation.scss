@@ -1,7 +1,7 @@
 .nav {
   width: auto;
   height: inherit;
-  margin-top: 1rem;
+  margin-top: 15px;
   position: relative;
 
   &__list {
@@ -28,7 +28,7 @@
   }
 
   .nav-menu {
-    height: 3rem;
+    height: 48px;
     position: fixed;
     bottom: 2vh;
     left: 50%;
@@ -40,7 +40,7 @@
     z-index: 10;
 
     &__container {
-      width: 9.4rem;
+      width: 150px;
       height: inherit;
       position: relative;
       display: flex;
@@ -49,14 +49,14 @@
 
     .nav__icon {
       height: inherit;
-      padding: 0 1rem;
+      padding: 0 15px;
       background-color: $color-primary;
       box-shadow: 0 0.5px 2px $color-grey-dark-2;
       cursor: pointer;
 
       &--magnifier {
-        width: 4.7rem;
-        height: 2.4rem;
+        width: 75px;
+        height: 38.5px;
         border-radius: 50rem;
         display: flex;
         justify-content: flex-start;
@@ -64,34 +64,32 @@
       }
 
       &--menu {
-        height: 3rem;
-        width: 3rem;
+        height: 48px;
+        width: 48px;
         position: absolute;
         top: 0;
-        left: 3rem;
+        left: 48px;
         border-radius: 50%;
-        z-index: 1;
+        z-index: 10;
         display: flex;
         justify-content: center;
         align-items: center;
       }
 
       &--bag {
-        width: 5rem;
-        height: 2.4rem;
-        border-radius: 50rem;
+        width: 80px;
+        height: 38.5px;
+        border-radius: 500px;
         position: absolute;
-        left: 4rem;
+        left: 64px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
       }
 
-      .search__icon,
-      .hamburger-menu__icon,
-      .bag__icon {
-        height: 1.2rem;
-        width: 1.2rem;
+      .svg__icon {
+        height: 19px;
+        width: 19px;
       }
     }
   }
