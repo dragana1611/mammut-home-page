@@ -187,22 +187,19 @@
   height: 865px;
 
   .video-bg {
-    width: 100%;
-    position: relative;
+    width: 100%;           
 
     &__video {
       width: 100%;
-      object-fit: cover;
       overflow: hidden;
+      object-fit: cover;      
     }
 
     &__text-content {
       width: 100%;
       height: auto;
       color: $color-primary;
-      background-color: $color-tertiary;
-      position: absolute;
-      top: 560px;
+      background-color: $color-tertiary;      
 
       display: flex;
       flex-direction: column;
@@ -318,12 +315,11 @@
   margin-top: 70px;
 
   .video-bg {
-    width: 100%;
-    overflow: hidden;
-    border: 1px solid red;
+    width: 100%;    
 
     &__video {
       width: 100%;
+      overflow: hidden;
       object-fit: cover;
     }
 
